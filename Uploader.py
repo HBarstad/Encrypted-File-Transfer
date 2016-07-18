@@ -1,18 +1,10 @@
 
 # coding: utf-8
 
+
+
+
 # In[353]:
-
-#Creates and Initializes Offset Value in a separate file
-#Only need to run this once
-
-def offset_initializer():
-    offset_file_handle = open('Offset_Counter', 'w')
-    offset_file_handle.write('1')
-    offset_file_handle.close()
-
-
-# In[354]:
 
 # Imported Libraries and Modules
 
@@ -28,6 +20,19 @@ import boto3
 import base64
 
 
+
+# In[354]:
+
+#Creates and Initializes Offset Value in a separate file
+#Only need to run this once
+
+def offset_initializer():
+    offset_file_handle = open('Offset_Counter', 'w')
+    offset_file_handle.write('1')
+    offset_file_handle.close()
+    
+    
+    
 # In[355]:
 
 #Reads offset file and return the value that it finds
